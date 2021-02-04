@@ -43,7 +43,7 @@ export default {
   }),
   computed: {
     async getDraftsForSeason7() {
-      await this.$axios.get("http://localhost:3001/api/draft/all/season_7", {withCredentials: true})
+      await this.$axios.get("https://pokemon-backend.netlify.app/.netlify/functions/api/draft/season_7", {withCredentials: true})
         .then(({data}) =>
         {
           this.drafts = data;

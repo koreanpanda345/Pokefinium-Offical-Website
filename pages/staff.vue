@@ -40,7 +40,7 @@ export default {
   }),
   computed: {
     getData() {
-      this.$axios.get("http://localhost:3001/api/staff/get", {withCredentials: true}).then(({data}) =>
+      this.$axios.get("https://pokemon-backend.netlify.app/.netlify/functions/api/staff", {withCredentials: true}).then(({data}) =>
       {
         this.staff = data;
       }).catch(error => console.error(error));
