@@ -4,7 +4,9 @@
     <!-- <div v-if="drafts.length == 0">
       {{getDraftsForSeason7}}
     </div> -->
-
+    <div v-if="drafts.length === 0">
+      {{getDrafts}}
+    </div>
     <div>
       <v-data-table
       :headers="headers"
@@ -58,7 +60,7 @@ export default {
         }
       ]
     },
-    async getDraftsForSeason7() {
+    async getDrafts() {
       await this.$axios.get("https://pokemon-backend.netlify.app/.netlify/functions/api/draft/")
         .then(({data}) =>
         {
