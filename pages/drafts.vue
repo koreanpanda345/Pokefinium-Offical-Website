@@ -21,11 +21,12 @@
         label="Search For Draft"
         class="mx-4"></v-text-field>
       </template>
-      <template v-slot:body.append>
-        <tr>
-          <td></td>
+      <template v-slot:body="{drafts}">
+        <tr v-for="draft in drafts" :key="draft">
+          <td>{{draft.name}}</td>
+          <td>{{draft.season}}</td>
+          <td><a :href="draft.draftDoc">View Doc</a></td>
         </tr>
-
       </template>
       </v-data-table>
     </div>
@@ -49,10 +50,6 @@ export default {
         {
           text: 'Season',
           value: 'season',
-        },
-        {
-          text: 'Liaisons',
-          value: 'liaisons'
         },
         {
           text: 'Doc',
