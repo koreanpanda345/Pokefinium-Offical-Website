@@ -22,11 +22,14 @@
         class="mx-4"></v-text-field>
       </template>
       <template v-slot:body="{drafts}">
+          <tbody>
         <tr v-for="draft in drafts" :key="draft">
+ 
           <td>{{draft.name}}</td>
           <td>{{draft.season}}</td>
           <td><a :href="draft.draftDoc">View Doc</a></td>
         </tr>
+          </tbody>
       </template>
       </v-data-table>
     </div>

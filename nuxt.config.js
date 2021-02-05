@@ -11,7 +11,7 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: 'https://cdn.discordapp.com/attachments/506646967477075979/805306920663121960/Untitled_3.png' }
     ]
   },
 
