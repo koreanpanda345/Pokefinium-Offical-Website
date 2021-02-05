@@ -30,7 +30,7 @@
           </v-chip>
           </v-row>
           </v-card-subtitle>
-          <v-btn :href="draft.draft_doc">View Doc</v-btn>
+          <v-btn :href="draft.draftDoc">View Doc</v-btn>
         </v-card>
       </v-col>
     </v-row>
